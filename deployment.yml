@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: node-app
-          image: 109240209122.dkr.ecr.us-east-1.amazonaws.com/nodeapp-javahome
+          image: 912770160514.dkr.ecr.us-east-2.amazonaws.com/project:latest
           resources:
             requests:
               memory: "12Mi"
