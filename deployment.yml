@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-app
+  labels:
+    app: node-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: node-app
+  template:
+    metadata:
+      labels:
+        app: node-app
+    spec:
+      containers:
+        - name: node-app
+          image: 109240209122.dkr.ecr.us-east-1.amazonaws.com/nodeapp-javahome
+          resources:
+            requests:
+              memory: "12Mi"
+              cpu: "50m"
+            limits:
+              memory: "25Mi"
+              cpu: "100m"
+          ports:
+            - containerPort: 80
